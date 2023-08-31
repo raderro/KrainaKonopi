@@ -13,7 +13,84 @@ const products = [
         imageUrl: 'zuza.png',
         description: 'dupa'
     },
-    // Dodaj wiêcej produktów
+    {
+        id: 3,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 4,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 5,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 6,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 7,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 8,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 9,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 10,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 11,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 12,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    {
+        id: 13,
+        title: 'Zuza',
+        price: 499.99,
+        imageUrl: 'zuza.png',
+        description: 'dupa'
+    },
+    
 ];
 
 const productGrid = document.getElementById('product-grid');
