@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Opis Produktu</title>
+    <style>
+        /* ... (jak wcześniej) ... */
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="logo.png" alt="Logo Sklepu">
+        </a>
+    </header>
+    <div class="container">
+        <div id="product-details">
+            <h2 id="product-title">Tytuł produktu</h2>
+            <p id="product-price">Cena: $0.00</p>
+            <img id="product-image" src="" alt="Zdjęcie produktu">
+            <p id="product-description">Opis produktu będzie się tutaj pojawiać.</p>
+            <button class="button">Dodaj do koszyka</button>
+        </div>
+    </div>
+    <script>
+        const products = [
+            {
+                id: 1,
+                title: 'Wikusia',
+                price: 999.99,
+                imageUrl: 'wikusia.jpg',
+                description: 'Wikusia to słodki człowiek którego warto kupić.'
+            },
+            {
+                id: 2,
+                title: 'Zuza',
+                price: 499.99,
+                imageUrl: 'zuza.png',
+                description: 'Zuza to piękna dziewczyna warta twojego zakupu.'
+            },
+            // Dodaj więcej produktów
+        ];
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = parseInt(urlParams.get('id'));
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            const productTitle = document.getElementById('product-title');
+            const productPrice = document.getElementById('product-price');
+            const productImage = document.getElementById('product-image');
+            const productDescription = document.getElementById('product-description');
+
+            productTitle.textContent = product.title;
+            productPrice.textContent = `Cena: $${product.price.toFixed(2)}`;
+            productImage.src = product.imageUrl; // Ustawienie ścieżki obrazu
+            productDescription.textContent = product.description;
+        }
+    </script>
+</body>
+</html>
