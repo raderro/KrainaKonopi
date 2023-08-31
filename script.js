@@ -15,7 +15,7 @@ const products = [
     },
     {
         id: 3,
-        title: 'Amnesia Haze',
+        title: 'Lemon Haze',
         price: 9.99,
         imageUrl: 'assets/lemon-haze.png',
         description: 'Purple Haze to odmiana marihuany z dominacj¹ Sativy. Poziom THC oscyluje miêdzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy¿owania odmian Purple Kush i Haze. Nie wbije Ciê ona w fotel niczym Gorilla Glue, a wrêcz przeciwnie pobudzi do dzia³ania poprzez senny przyp³yw euforii.'
