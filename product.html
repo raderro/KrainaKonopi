@@ -14,6 +14,23 @@
             <img id="logo" src="assets/logo.png" alt="Logo Sklepu">
         </a>
     </header>
+
+    <div id="cart">
+        <h2>Koszyk</h2>
+        <ul id="cart-items">
+        </ul>
+        <p id="cart-total">Suma: $0.00</p>
+        <button id="checkout-button">Przejdź do płatności</button>
+    </div>
+
+    <script>
+        const checkoutButton = document.getElementById("checkout-button");
+
+        checkoutButton.addEventListener("click", () => {
+            window.location.href = "platnosc.html";
+        });
+    </script>
+
     <div class="container">
         <div id="product-details">
             <h2 id="product-title">Tytuł produktu</h2>
@@ -48,12 +65,18 @@
             },
             {
                 id: 4,
-                title: 'Diesel Haze',
+                title: 'White Diesel Haze',
                 price: 10.99,
                 imageUrl: 'assets/diesel-haze.png',
                 description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitnącej automatycznie. Rośliny nie są za wysokie i o wiele szybsze niż tradycyjne sativy, przy tym zachowują dosyć dobrą produkcję topów. White występuje w nazwie ponieważ topy są mocno pokryte kryształkami żywicy, podobnie jak w White Widow.'
             },
-            
+            {
+                id: 5,
+                title: 'White Widow',
+                price: 8.99,
+                imageUrl: 'assets/white-widow.png',
+                description: 'White Widow obfituje w mircen, który jest dobrym środkiem przeciwbólowym i rozluźniającym, a także wykorzystywanym w terapii neuropatii i nudności. Ma bardzo dobre działanie przeciwbólowe, ale dzięki silnej naturze Indica jest także świetnym kompanem w wypoczynku.'
+            },
         ];
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -66,10 +89,11 @@
             const productDescription = document.getElementById('product-description');
 
             productTitle.textContent = product.title;
-            productPrice.textContent = `Cena: $${product.price.toFixed(2)}`;
+            productPrice.textContent = `Cena: $${product.price.toFixed(2) + "/1g"}`;
             productImage.src = product.imageUrl;
             productDescription.textContent = product.description;
         }
     </script>
+
 </body>
 </html>

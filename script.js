@@ -22,12 +22,18 @@ const products = [
     },
     {
         id: 4,
-        title: 'Diesel Haze',
+        title: 'White Diesel Haze',
         price: 10.99,
         imageUrl: 'assets/diesel-haze.png',
         description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitn¹cej automatycznie. Roœliny nie s¹ za wysokie i o wiele szybsze ni¿ tradycyjne sativy, przy tym zachowuj¹ dosyæ dobr¹ produkcjê topów. White wystêpuje w nazwie poniewa¿ topy s¹ mocno pokryte kryszta³kami ¿ywicy, podobnie jak w White Widow.'
     },
-    
+    {
+        id: 5,
+        title: 'White Widow',
+        price: 8.99,
+        imageUrl: 'assets/white-widow.png',
+        description: 'White Widow obfituje w mircen, który jest dobrym œrodkiem przeciwbólowym i rozluŸniaj¹cym, a tak¿e wykorzystywanym w terapii neuropatii i nudnoœci. Ma bardzo dobre dzia³anie przeciwbólowe, ale dziêki silnej naturze Indica jest tak¿e œwietnym kompanem w wypoczynku.'
+    },
 ];
 
 const productGrid = document.getElementById('product-grid');
@@ -63,7 +69,7 @@ products.forEach(product => {
     productTitle.classList.add('product-title');
 
     const productPrice = document.createElement('p');
-    productPrice.textContent = `$${product.price.toFixed(2)}`;
+    productPrice.textContent = `$${product.price.toFixed(2) + "/1g"}`;
     productPrice.classList.add('product-price');
 
     const productLink = document.createElement('a');
