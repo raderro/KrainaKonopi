@@ -13,83 +13,6 @@ const products = [
         imageUrl: 'zuza.png',
         description: 'dupa'
     },
-    {
-        id: 3,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 4,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 5,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 6,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 7,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 8,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 9,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 10,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 11,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 12,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
-    {
-        id: 13,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
-    },
     
 ];
 
@@ -114,7 +37,7 @@ const updateCartTotal = (price) => {
 products.forEach(product => {
     const productCard = document.createElement('div');
     productCard.classList.add('product-card');
-    productCard.classList.add('fadeIn'); // Dodajemy animacjê fadeIn
+    productCard.classList.add('fadeIn');
 
     const productImage = document.createElement('img');
     productImage.src = product.imageUrl;
@@ -135,7 +58,7 @@ products.forEach(product => {
 
     const addToCartButton = document.createElement('button');
     addToCartButton.textContent = 'Dodaj do koszyka';
-    addToCartButton.classList.add('button'); // Dodajemy klasê przycisku
+    addToCartButton.classList.add('button'); 
     addToCartButton.addEventListener('click', () => {
         addToCart(product);
     });
@@ -146,4 +69,10 @@ products.forEach(product => {
     productCard.appendChild(addToCartButton);
 
     productGrid.appendChild(productCard);
+});
+
+const checkoutButton = document.getElementById("checkout-button");
+
+checkoutButton.addEventListener("click", () => {
+    window.location.href = "platnosc.html"; // Przekierowanie do strony p³atnoœci
 });

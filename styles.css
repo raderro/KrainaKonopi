@@ -85,6 +85,20 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#checkout-button {
+    padding: 10px 20px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    #checkout-button:hover {
+        background-color: #0056b3;
+    }
+
 #cart-items {
     list-style-type: none;
     padding: 0;
@@ -152,6 +166,6 @@ header {
 
 @media (max-width: 768px) {
     .product-card {
-        max-width: 100%; /* Kontener na telefonie zajmie pe³n¹ szerokoœæ ekranu */
+        max-width: 100%;
 }
 }

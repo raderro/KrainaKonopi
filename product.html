@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles2.css">
     <title>Opis Produktu</title>
     <style>
-        /* ... (jak wcześniej) ... */
     </style>
 </head>
 <body>
@@ -40,7 +39,7 @@
                 imageUrl: 'zuza.png',
                 description: 'Zuza to piękna dziewczyna warta twojego zakupu.'
             },
-            // Dodaj więcej produktów
+            
         ];
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -54,7 +53,7 @@
 
             productTitle.textContent = product.title;
             productPrice.textContent = `Cena: $${product.price.toFixed(2)}`;
-            productImage.src = product.imageUrl; // Ustawienie ścieżki obrazu
+            productImage.src = product.imageUrl;
             productDescription.textContent = product.description;
         }
     </script>
