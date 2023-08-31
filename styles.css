@@ -24,6 +24,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: black;
 }
 
 #product-grid {
@@ -31,17 +32,17 @@ header {
     gap: 20px;
     padding: 20px;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     text-align: center;
     margin: 20px;
     color: white;
     height: 600px;
+
 }
 
 #product-grid {
     justify-content: center;
-    background-color: black;
     display: grid;
     flex-wrap: wrap;
     height: 1750px;
@@ -56,6 +57,7 @@ header {
     text-align: center;
     margin: 20px;
     max-width: 300px;
+    background-color: black;
 }
 
 .product-image {
@@ -92,7 +94,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
+    background-color: black;
 }
 
 #main-content {
