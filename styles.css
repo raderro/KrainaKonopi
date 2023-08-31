@@ -43,7 +43,7 @@ header {
 }
 
 .product-image {
-    height: auto;
+    height: 400px;
     width: 280px;
     max-width: 100%;
     max-height: 100%;
