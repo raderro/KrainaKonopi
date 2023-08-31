@@ -1,17 +1,31 @@
 const products = [
     {
         id: 1,
-        title: 'Wikusia',
-        price: 999.99,
-        imageUrl: 'wikusia.jpg',
-        description: 'Wikusia to s³odki cz³owiek którego warto kupiæ.'
+        title: 'Amnesia Haze',
+        price: 15.99,
+        imageUrl: 'assets/amnesia-haze.png',
+        description: 'Amnesia Haze osi¹ga poziom THC rzêdu 22%, przez co haj pojawia siê natychmiast i utrzymuje siê kilka godzin. Jej kwiaty zapewniaj¹ równie¿ œredni poziom CBD, zapewniaj¹c relaksuj¹ce, niezamulaj¹ce i terapeutyczne dzia³anie. Stymuluj¹cy i umys³owy haj Amnesia Haze czyni j¹ œwietnym wyborem do palenia w ci¹gu dnia.'
     },
     {
         id: 2,
-        title: 'Zuza',
-        price: 499.99,
-        imageUrl: 'zuza.png',
-        description: 'dupa'
+        title: 'Purple Haze',
+        price: 12.99,
+        imageUrl: 'assets/purple-haze.png',
+        description: 'Purple Haze to odmiana marihuany z dominacj¹ Sativy. Poziom THC oscyluje miêdzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy¿owania odmian Purple Kush i Haze. Nie wbije Ciê ona w fotel niczym Gorilla Glue, a wrêcz przeciwnie pobudzi do dzia³ania poprzez senny przyp³yw euforii.'
+    },
+    {
+        id: 3,
+        title: 'Amnesia Haze',
+        price: 9.99,
+        imageUrl: 'assets/lemon-haze.png',
+        description: 'Purple Haze to odmiana marihuany z dominacj¹ Sativy. Poziom THC oscyluje miêdzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy¿owania odmian Purple Kush i Haze. Nie wbije Ciê ona w fotel niczym Gorilla Glue, a wrêcz przeciwnie pobudzi do dzia³ania poprzez senny przyp³yw euforii.'
+    },
+    {
+        id: 4,
+        title: 'Diesel Haze',
+        price: 10.99,
+        imageUrl: 'assets/diesel-haze.png',
+        description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitn¹cej automatycznie. Roœliny nie s¹ za wysokie i o wiele szybsze ni¿ tradycyjne sativy, przy tym zachowuj¹ dosyæ dobr¹ produkcjê topów. White wystêpuje w nazwie poniewa¿ topy s¹ mocno pokryte kryszta³kami ¿ywicy, podobnie jak w White Widow.'
     },
     
 ];
