@@ -4,6 +4,25 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
+.taskbar {
+    text-align: center;
+}
+
+.news {
+    padding-top: 30px;
+    text-align: center;
+    color: black;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.news-border{
+    color: white;
+    border-style: groove;
+    border-color: black;
+    background-color: black;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: dimgray;

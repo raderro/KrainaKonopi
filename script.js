@@ -4,35 +4,70 @@ const products = [
         title: 'Amnesia Haze',
         price: 15.99,
         imageUrl: 'assets/amnesia-haze.png',
-        description: 'Amnesia Haze osi¹ga poziom THC rzêdu 22%, przez co haj pojawia siê natychmiast i utrzymuje siê kilka godzin. Jej kwiaty zapewniaj¹ równie¿ œredni poziom CBD, zapewniaj¹c relaksuj¹ce, niezamulaj¹ce i terapeutyczne dzia³anie. Stymuluj¹cy i umys³owy haj Amnesia Haze czyni j¹ œwietnym wyborem do palenia w ci¹gu dnia.'
+        description: 'Amnesia Haze osiï¿½ga poziom THC rzï¿½du 22%, przez co haj pojawia siï¿½ natychmiast i utrzymuje siï¿½ kilka godzin. Jej kwiaty zapewniajï¿½ rï¿½wnieï¿½ ï¿½redni poziom CBD, zapewniajï¿½c relaksujï¿½ce, niezamulajï¿½ce i terapeutyczne dziaï¿½anie. Stymulujï¿½cy i umysï¿½owy haj Amnesia Haze czyni jï¿½ ï¿½wietnym wyborem do palenia w ciï¿½gu dnia.'
     },
     {
         id: 2,
         title: 'Purple Haze',
         price: 12.99,
         imageUrl: 'assets/purple-haze.png',
-        description: 'Purple Haze to odmiana marihuany z dominacj¹ Sativy. Poziom THC oscyluje miêdzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy¿owania odmian Purple Kush i Haze. Nie wbije Ciê ona w fotel niczym Gorilla Glue, a wrêcz przeciwnie pobudzi do dzia³ania poprzez senny przyp³yw euforii.'
+        description: 'Purple Haze to odmiana marihuany z dominacjï¿½ Sativy. Poziom THC oscyluje miï¿½dzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzyï¿½owania odmian Purple Kush i Haze. Nie wbije Ciï¿½ ona w fotel niczym Gorilla Glue, a wrï¿½cz przeciwnie pobudzi do dziaï¿½ania poprzez senny przypï¿½yw euforii.'
     },
     {
         id: 3,
         title: 'Lemon Haze',
         price: 9.99,
         imageUrl: 'assets/lemon-haze.png',
-        description: 'Purple Haze to odmiana marihuany z dominacj¹ Sativy. Poziom THC oscyluje miêdzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy¿owania odmian Purple Kush i Haze. Nie wbije Ciê ona w fotel niczym Gorilla Glue, a wrêcz przeciwnie pobudzi do dzia³ania poprzez senny przyp³yw euforii.'
+        description: 'Purple Haze to odmiana marihuany z dominacjï¿½ Sativy. Poziom THC oscyluje miï¿½dzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzyï¿½owania odmian Purple Kush i Haze. Nie wbije Ciï¿½ ona w fotel niczym Gorilla Glue, a wrï¿½cz przeciwnie pobudzi do dziaï¿½ania poprzez senny przypï¿½yw euforii.'
     },
     {
         id: 4,
         title: 'White Diesel Haze',
         price: 10.99,
         imageUrl: 'assets/diesel-haze.png',
-        description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitn¹cej automatycznie. Roœliny nie s¹ za wysokie i o wiele szybsze ni¿ tradycyjne sativy, przy tym zachowuj¹ dosyæ dobr¹ produkcjê topów. White wystêpuje w nazwie poniewa¿ topy s¹ mocno pokryte kryszta³kami ¿ywicy, podobnie jak w White Widow.'
+        description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitnï¿½cej automatycznie. Roï¿½liny nie sï¿½ za wysokie i o wiele szybsze niï¿½ tradycyjne sativy, przy tym zachowujï¿½ dosyï¿½ dobrï¿½ produkcjï¿½ topï¿½w. White wystï¿½puje w nazwie poniewaï¿½ topy sï¿½ mocno pokryte krysztaï¿½kami ï¿½ywicy, podobnie jak w White Widow.'
     },
     {
         id: 5,
         title: 'White Widow',
         price: 8.99,
         imageUrl: 'assets/white-widow.png',
-        description: 'White Widow obfituje w mircen, który jest dobrym œrodkiem przeciwbólowym i rozluŸniaj¹cym, a tak¿e wykorzystywanym w terapii neuropatii i nudnoœci. Ma bardzo dobre dzia³anie przeciwbólowe, ale dziêki silnej naturze Indica jest tak¿e œwietnym kompanem w wypoczynku.'
+        description: 'White Widow obfituje w mircen, ktï¿½ry jest dobrym ï¿½rodkiem przeciwbï¿½lowym i rozluï¿½niajï¿½cym, a takï¿½e wykorzystywanym w terapii neuropatii i nudnoï¿½ci. Ma bardzo dobre dziaï¿½anie przeciwbï¿½lowe, ale dziï¿½ki silnej naturze Indica jest takï¿½e ï¿½wietnym kompanem w wypoczynku.'
+    },
+    {
+        id: 6,
+        title: 'MDMA - Niebieskie',
+        price: 9.60,
+        imageUrl: 'assets/mdma_niebieska.jpg',
+        description: 'Niebieska tabletka'
+    },
+    {
+        id: 7,
+        title: 'MDMA - RÃ³Å¼owe',
+        price: 9.60,
+        imageUrl: 'assets/mdma_rozowe.jpg',
+        description: 'Rozowa tabletka'
+    },
+    {
+        id: 8,
+        title: 'MDMA - Å»Ã³Å‚te',
+        price: 9.60,
+        imageUrl: 'assets/mdma_zolte.jpg',
+        description: 'Å»Ã³Å‚ta tabletka'
+    },
+    {
+        id: 9,
+        title: 'MDMA - Zielone',
+        price: 9.60,
+        imageUrl: 'assets/mdma_zielone.jpg',
+        description: 'Zielona tabletka'
+    },
+    {
+        id: 10,
+        title: 'MDMA - Losowe',
+        price: 9.60,
+        imageUrl: 'assets/mdma_mix.jpg',
+        description: 'Losowa tabletka'
     },
 ];
 
@@ -94,5 +129,5 @@ products.forEach(product => {
 const checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", () => {
-    window.location.href = "platnosc.html"; // Przekierowanie do strony p³atnoœci
+    window.location.href = "platnosc.html"; // Przekierowanie do strony pï¿½atnoï¿½ci
 });
