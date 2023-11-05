@@ -75,18 +75,37 @@ const productGrid = document.getElementById('product-grid');
 const cartItems = document.getElementById('cart-items');
 const cartTotal = document.getElementById('cart-total');
 
-const addToCart = (product) => {
-    const cartItem = document.createElement('li');
-    cartItem.textContent = `${product.title} - $${product.price.toFixed(2)}`;
-    cartItems.appendChild(cartItem);
+const cart = []; // Koszyk
 
-    updateCartTotal(product.price);
+function findCartItem(productId) {
+    return cart.find(item => item.product.id === productId);
+}
+
+const addToCart = (product) => {
+    const cartItem = findCartItem(product.id);
+    if (cartItem) {
+        cartItem.quantity++;
+    } else {
+        cart.push({ product, quantity: 1 });
+    }
+    updateCart();
 };
 
-const updateCartTotal = (price) => {
-    const currentTotal = parseFloat(cartTotal.textContent.replace('Suma: $', ''));
-    const newTotal = currentTotal + price;
-    cartTotal.textContent = `Suma: $${newTotal.toFixed(2)}`;
+const updateCart = () => {
+    cartItems.innerHTML = "";
+    cart.forEach(cartItem => {
+        const product = cartItem.product;
+        const cartItemElement = document.createElement('li');
+        cartItemElement.textContent = `${product.title} x ${cartItem.quantity} - $${(product.price * cartItem.quantity).toFixed(2)}`;
+        cartItems.appendChild(cartItemElement);
+    });
+
+    updateCartTotal();
+};
+
+const updateCartTotal = () => {
+    const total = cart.reduce((acc, cartItem) => acc + (cartItem.product.price * cartItem.quantity), 0);
+    cartTotal.textContent = `Suma: $${total.toFixed(2)}`;
 };
 
 products.forEach(product => {
@@ -113,7 +132,7 @@ products.forEach(product => {
 
     const addToCartButton = document.createElement('button');
     addToCartButton.textContent = 'Dodaj do koszyka';
-    addToCartButton.classList.add('button'); 
+    addToCartButton.classList.add('button');
     addToCartButton.addEventListener('click', () => {
         addToCart(product);
     });
@@ -129,5 +148,9 @@ products.forEach(product => {
 const checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", () => {
-    window.location.href = "platnosc.html"; // Przekierowanie do strony p�atno�ci
+    // Przekierowanie do strony płatności z informacją o koszyku
+    // Tutaj możesz przekazać informacje o koszyku do strony płatności
+    const cartData = JSON.stringify(cart);
+    localStorage.setItem("cartData", cartData);
+    window.location.href = "platnosc.html";
 });

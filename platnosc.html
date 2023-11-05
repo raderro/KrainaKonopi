@@ -15,19 +15,50 @@
     </header>
     <main>
         <h1>Zaplac</h1>
+        <div id="cart-summary">
+            <!-- Tu będą wyświetlane produkty w koszyku i suma zakupów -->
+        </div>
         <form id="payment-form">
+            <br></br>
             <label for="card-number">Numer karty kredytowej:</label>
             <input type="text" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" required>
 
-            <label for="expiry">Waznosc:</label>
+            <label for "expiry">Ważność:</label>
             <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
 
             <label for="cvv">CVV:</label>
             <input type="text" id="cvv" name="cvv" placeholder="###" required>
 
-            <button type="submit">Zatwierdz</button>
+            <a href="zakupiono.html">
+                <button type="submit">Zatwierdź</button>
+            </a>
         </form>
     </main>
     <script src="script.js"></script>
+    <script>
+        // Odczytaj dane koszyka z localStorage
+        const cartData = localStorage.getItem("cartData");
+        if (cartData) {
+            const cart = JSON.parse(cartData);
+
+            // Wyświetl produkty w koszyku i oblicz sumę zakupów
+            const cartSummary = document.getElementById("cart-summary");
+            let total = 0;
+
+            cart.forEach(cartItem => {
+                const product = cartItem.product;
+                const quantity = cartItem.quantity;
+                total += product.price * quantity;
+
+                const cartItemElement = document.createElement("div");
+                cartItemElement.textContent = `${product.title} x ${quantity} - $${(product.price * quantity).toFixed(2)}`;
+                cartSummary.appendChild(cartItemElement);
+            });
+
+            const totalElement = document.createElement("div");
+            totalElement.textContent = `Suma: $${total.toFixed(2)}`;
+            cartSummary.appendChild(totalElement);
+        }
+    </script>
 </body>
 </html>
