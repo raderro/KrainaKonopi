@@ -176,6 +176,11 @@ header {
     transform: scale(1.05);
 }
 
+.button2:hover {
+    background-color: #29373f;
+    transform: scale(1.2);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
