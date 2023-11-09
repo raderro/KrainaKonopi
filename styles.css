@@ -16,6 +16,23 @@ body, h1, h2, h3, p, ul, li {
     padding-right: 300px;
 }
 
+#filter-options {
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
 .news-border{
     color: white;
     border-style: groove;
