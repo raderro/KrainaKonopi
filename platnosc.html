@@ -19,15 +19,20 @@
             <!-- Tu będą wyświetlane produkty w koszyku i suma zakupów -->
         </div>
         <form id="payment-form">
-            <br></br>
-            <label for="card-number">Numer karty kredytowej:</label>
-            <input type="number" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" required>
+            <div class="input-group">
+                <label for="card-number">Numer karty kredytowej:</label>
+                <input type="text" id="card-number" name="card-number" maxlength="16" required>
+            </div>
 
-            <label for "expiry">Ważność:</label>
-            <input type="number" id="expiry" name="expiry" placeholder="MM/YY" required>
+            <div class="input-group">
+                <label for="expiry">Ważność:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+            </div>
 
-            <label for="cvv">CVV:</label>
-            <input type="number" id="cvv" name="cvv" placeholder="###" required>
+            <div class="input-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required>
+            </div>
 
             <a href="zakupiono.html">
                 <button type="submit">Zatwierdź</button>
@@ -35,6 +40,20 @@
         </form>
     </main>
     <script src="script.js"></script>
+    <script>
+        // Dodaj obsługę zdarzeń do pola wprowadzania daty ważności
+        const expiryInput = document.getElementById("expiry");
+
+        expiryInput.addEventListener("input", (event) => {
+            const value = event.target.value.replace(/\D/g, ""); // Usuń wszystkie niecyfrowe znaki
+            if (value.length > 2) {
+                event.target.value = `${value.slice(0, 2)}/${value.slice(2)}`;
+            } else {
+                event.target.value = value;
+            }
+        });
+    </script>
+
     <script>
         // Odczytaj dane koszyka z localStorage
         const cartData = localStorage.getItem("cartData");
