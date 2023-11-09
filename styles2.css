@@ -21,6 +21,7 @@ header {
     background-color: gray;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease;
+    max-width: 100%;
 }
 
 h1 {
@@ -31,11 +32,32 @@ h2 {
     color: #35424a;
 }
 
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
 #product-details {
     margin-left:205px;
     margin-top: 2em;
     animation: slideIn 1s ease;
     color: black;
+    margin: 0;
+}
+
+.product-card {
+    max-width: 280px;
+}
+
+.product-image {
+    height: 300px;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
 }
 
 #product-image {
@@ -44,6 +66,7 @@ h2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     height: 600px;
     width: 400px;
+    margin-top: 10px;
 }
 
 #product-description {
@@ -60,6 +83,8 @@ h2 {
     justify-content: space-between;
     color: white;
     background-color: black;
+    flex-direction: column;
+    align-items: center;
 }
 
 #checkout-button {
