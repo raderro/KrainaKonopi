@@ -189,29 +189,3 @@ checkoutButton.addEventListener("click", () => {
     localStorage.setItem("cartData", cartData);
     window.location.href = "platnosc.html";
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const cartButton = document.getElementById("checkout-button");
-
-    cartButton.addEventListener("click", function () {
-        const cartData = JSON.stringify(cart);
-        localStorage.setItem("cartData", cartData);
-        window.location.href = "platnosc.html";
-    });
-});
-
-function toggleDisplay() {
-    const cart = document.getElementById("cart");
-    const productDetails = document.getElementById("product-details");
-
-    if (window.innerWidth <= 768) {
-        cart.style.display = "none";
-        productDetails.style.marginLeft = "0";
-    } else {
-        cart.style.display = "flex";
-        productDetails.style.marginLeft = "205px";
-    }
-}
-
-window.addEventListener("load", toggleDisplay);
-window.addEventListener("resize", toggleDisplay);

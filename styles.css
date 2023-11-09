@@ -6,8 +6,6 @@ body, h1, h2, h3, p, ul, li {
 
 .taskbar {
     text-align: center;
-    display: flex;
-    justify-content: center;
 }
 
 .news {
@@ -25,11 +23,6 @@ body, h1, h2, h3, p, ul, li {
     background-color: black;
 }
 
-#logo {
-    max-width: 100%;
-    height: auto;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: dimgray;
@@ -40,9 +33,8 @@ header {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
+    padding: 1em 0;
+    justify-content: center;
 }
 
 #cart {
