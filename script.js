@@ -69,6 +69,41 @@ const products = [
         imageUrl: 'assets/mdma_mix.jpg',
         description: 'Losowa tabletka'
     },
+    {
+        id: 11,
+        title: 'Grzybki Halucynogenne',
+        price: 11.50,
+        imageUrl: 'assets/GrzybkiHalucynki.png',
+        description: 'Grzybki Halucynki'
+    },
+    {
+        id: 12,
+        title: 'Haszysz - THC 62%',
+        price: 21.99,
+        imageUrl: 'assets/haszysz.jpg',
+        description: 'Haszysz'
+    },
+    {
+        id: 13,
+        title: 'Haszysz - THC 48%',
+        price: 19.99,
+        imageUrl: 'assets/haszysz.jpg',
+        description: 'Haszysz'
+    },
+    {
+        id: 14,
+        title: 'Haszysz - THC 57%',
+        price: 20.99,
+        imageUrl: 'assets/haszysz.jpg',
+        description: 'Haszysz'
+    },
+    {
+        id: 15,
+        title: 'Haszysz - THC 69%',
+        price: 22.50,
+        imageUrl: 'assets/haszysz.jpg',
+        description: 'Haszysz'
+    },
 ];
 
 const productGrid = document.getElementById('product-grid');
