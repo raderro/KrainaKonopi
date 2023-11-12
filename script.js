@@ -199,7 +199,7 @@ const checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", () => {
     // Przekierowanie do strony płatności z informacją o koszyku
-    // Tutaj możesz przekazać informacje o koszyku do strony płatności
+    // Przekazywanie informacji o koszyku do strony płatności
     const cartData = JSON.stringify(cart);
     localStorage.setItem("cartData", cartData);
     window.location.href = "platnosc.html";
@@ -216,30 +216,30 @@ const updateProductGrid = () => {
     const selectedCategory = categorySelect.value;
     const selectedSort = sortSelect.value;
 
-    // Filtruj produkty według kategorii
+    // Filtruje produkty według kategorii
     const filteredProducts = selectedCategory === 'all' ? products : products.filter(product => product.category === selectedCategory);
 
-    // Sortuj produkty
+    // Sortuje produkty
     const sortedProducts = filteredProducts.sort((a, b) => {
         if (selectedSort === 'priceAsc') {
             return a.price - b.price;
         } else if (selectedSort === 'priceDesc') {
             return b.price - a.price;
         }
-        // Dodaj dodatkowe przypadki sortowania, jeśli potrzebujesz
+        // Dodaje dodatkowe przypadki sortowania, jeśli potrzebujesz
     });
 
-    productGrid.innerHTML = ""; // Wyczyść istniejące produkty
+    productGrid.innerHTML = ""; // Czyści istniejące produkty
 
     sortedProducts.forEach(product => {
         renderProduct(product);
     });
 };
 
-// Obsługa zmiany wybranej kategorii
+// Obsługuje zmiany wybranej kategorii
 categorySelect.addEventListener('change', updateProductGrid);
 
-// Obsługa zmiany wybranej opcji sortowania
+// Obsługuje zmiany wybranej opcji sortowania
 sortSelect.addEventListener('change', updateProductGrid);
 
 // Początkowe załadowanie produktów
