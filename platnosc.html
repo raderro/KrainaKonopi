@@ -18,7 +18,12 @@
         <div id="cart-summary">
             <!-- Tu będą wyświetlane produkty w koszyku i suma zakupów -->
         </div>
-        <form id="payment-form">
+        <form action="send_mail.php" method="post" id="payment-form">
+            <div class="input-group">
+                <label for="card-number">Email:</label>
+                <input type="text" name="email"/>
+            </div>
+
             <div class="input-group">
                 <label for="card-number">Numer karty kredytowej:</label>
                 <input type="text" id="card-number" name="card-number" maxlength="16" required>
@@ -32,6 +37,12 @@
             <div class="input-group">
                 <label for="cvv">CVV:</label>
                 <input type="text" id="cvv" name="cvv" maxlength="3" required>
+            </div>
+
+            <div class="input-group">
+                <label for="promo-code">Kod promocyjny:</label>
+                <input type="text" id="promo-code" name="promo-code">
+                <button id="apply-promo-code">Zastosuj kod</button>
             </div>
 
             <a href="zakupiono.html">
