@@ -3,7 +3,7 @@ const products = [
         id: 1,
         title: 'Amnesia Haze',
         price: 15.99,
-        category: 'haze',
+        category: 'susz',
         imageUrl: 'assets/amnesia-haze.png',
         description: 'Amnesia Haze osi�ga poziom THC rz�du 22%, przez co haj pojawia si� natychmiast i utrzymuje si� kilka godzin. Jej kwiaty zapewniaj� r�wnie� �redni poziom CBD, zapewniaj�c relaksuj�ce, niezamulaj�ce i terapeutyczne dzia�anie. Stymuluj�cy i umys�owy haj Amnesia Haze czyni j� �wietnym wyborem do palenia w ci�gu dnia.'
     },
@@ -11,7 +11,7 @@ const products = [
         id: 2,
         title: 'Purple Haze',
         price: 12.99,
-        category: 'haze',
+        category: 'susz',
         imageUrl: 'assets/purple-haze.png',
         description: 'Purple Haze to odmiana marihuany z dominacj� Sativy. Poziom THC oscyluje mi�dzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy�owania odmian Purple Kush i Haze. Nie wbije Ci� ona w fotel niczym Gorilla Glue, a wr�cz przeciwnie pobudzi do dzia�ania poprzez senny przyp�yw euforii.'
     },
@@ -19,7 +19,7 @@ const products = [
         id: 3,
         title: 'Lemon Haze',
         price: 9.99,
-        category: 'haze',
+        category: 'susz',
         imageUrl: 'assets/lemon-haze.png',
         description: 'Purple Haze to odmiana marihuany z dominacj� Sativy. Poziom THC oscyluje mi�dzy 18-23 %. Nasze nasiona Purple Haze to wynik skrzy�owania odmian Purple Kush i Haze. Nie wbije Ci� ona w fotel niczym Gorilla Glue, a wr�cz przeciwnie pobudzi do dzia�ania poprzez senny przyp�yw euforii.'
     },
@@ -27,7 +27,7 @@ const products = [
         id: 4,
         title: 'White Diesel Haze',
         price: 10.99,
-        category: 'haze',
+        category: 'susz',
         imageUrl: 'assets/diesel-haze.png',
         description: 'White Diesel Haze Automatic to szybka sativa w wersji kwitn�cej automatycznie. Ro�liny nie s� za wysokie i o wiele szybsze ni� tradycyjne sativy, przy tym zachowuj� dosy� dobr� produkcj� top�w. White wyst�puje w nazwie poniewa� topy s� mocno pokryte kryszta�kami �ywicy, podobnie jak w White Widow.'
     },
@@ -35,7 +35,7 @@ const products = [
         id: 5,
         title: 'White Widow',
         price: 8.99,
-        category: 'haze',
+        category: 'susz',
         imageUrl: 'assets/white-widow.png',
         description: 'White Widow obfituje w mircen, kt�ry jest dobrym �rodkiem przeciwb�lowym i rozlu�niaj�cym, a tak�e wykorzystywanym w terapii neuropatii i nudno�ci. Ma bardzo dobre dzia�anie przeciwb�lowe, ale dzi�ki silnej naturze Indica jest tak�e �wietnym kompanem w wypoczynku.'
     },
@@ -83,7 +83,7 @@ const products = [
         id: 11,
         title: 'Grzybki Halucynogenne',
         price: 11.50,
-        category: 'hallucinogens',
+        category: 'psychedelics',
         imageUrl: 'assets/GrzybkiHalucynki.png',
         description: 'Grzybki Halucynki'
     },
@@ -118,6 +118,22 @@ const products = [
         category: 'hash',
         imageUrl: 'assets/haszysz.jpg',
         description: 'Haszysz'
+    },
+    {
+        id: 16,
+        title: 'LSD',
+        price: 11.99,
+        category: 'psychedelics',
+        imageUrl: 'assets/lsd.jpeg',
+        description: 'LSD'
+    },
+    {
+        id: 17,
+        title: 'DMT',
+        price: 25.00,
+        category: 'psychedelics',
+        imageUrl: 'assets/dmt.jpg',
+        description: 'DMT'
     },
 ];
 
