@@ -172,6 +172,8 @@ header {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
+    background-color: #4dc9517c;
+    color: white;
 }
 
 .button2 {
@@ -186,16 +188,25 @@ header {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
+    border: 2px solid #4dc9517c;
 }
 
 .button:hover {
     background-color: #29373f;
     transform: scale(1.05);
+    background-color: #4dc9517c;
+    color: white;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .button2:hover {
     background-color: #29373f;
     transform: scale(1.2);
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: #4dc9517c;
+    color: white;
 }
 
 @keyframes fadeIn {

@@ -22,6 +22,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .news-border{
+    text-align: center;
     color: white;
     border-style: groove;
     border-color: black;
@@ -39,7 +40,7 @@ header {
     color: white;
     text-align: center;
     align-items: center;
-    padding: 1em 0;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -60,6 +61,8 @@ header {
 .button:hover {
     background-color: #29373f;
     transform: scale(1.2);
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 @media screen and (max-width: 500px) {
@@ -88,4 +91,17 @@ header {
         font-size: 15px;
     }
     
+}
+
+#logo {
+    max-width: 100%;
+}
+
+.taskbar button, .button {
+    border: 2px solid #4dc9517c;
+}
+
+.taskbar button:hover, .button:hover {
+    background-color: #4dc9517c;
+    color: white;
 }
