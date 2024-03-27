@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemp Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/shop-icon-remove.png" />
+</head>
+<body>
+    <div id="farmNameModal" class="modal">
+        <div class="modal-content">
+          <h2>Welcome to your hemp farm!</h2>
+          <p>Please provide the name of your hemp farm:</p>
+          <input class="inputDefault" type="text" id="farmNameInput">
+          <button class="buttonDefault" id="submitNameBtn">Confirm</button>
+        </div>
+      </div>
+
+    <div id="game">
+        <div class="leftSite">
+            <div style="float: left;">
+                <h2 class="farmName" style="text-shadow: 3px 4px black;" id="farmNameHeader">Farm Name: </h2>
+            </div>
+            <br/>
+
+            <div class="clickUpgrade" id="clickUpgrade">
+                <h3>Upgrade clicker</h3>
+                <h3 id="clickUpgradeCost">10</h3>
+                <button class="buttonDefault" id="upgradeButton">Upgrade</button>
+            </div>
+
+            <br/>
+            <div class="Stats" id="Stats">
+                <h2>Stats</h2>
+                <h3 id="miniWorkersStats">Mini Workers: 0</h3>
+                <h3 id="midWorkersStats">Mid Workers: 0</h3>
+                <h3 id="bigWorkersStats">Big Workers: 0</h3>
+            </div>
+
+            <div class="quests" id="quests">
+                <h2>Quests</h2>
+                <div class="quest" id="quest1_">
+                    <h3 id="quest1">Collect 10 hemp: 0/10</h3>
+                    <progress class="progress" id="quest1Progress" value="0" max="10"></progress>
+                </div>
+                <div class="quest" id="quest2_">
+                    <h3 id="quest2">Upgrade clicker 3 times: 0/10</h3>
+                    <progress class="progress" id="quest2Progress" value="0" max="10"></progress>
+                </div>
+                <div class="quest" id="quest3_">
+                    <h3 id="quest3">Buy your first mini worker: 0/5</h3>
+                    <progress class="progress" id="quest3Progress" value="0" max="5"></progress>
+                </div>
+            </div>
+        </div>
+
+        <div class="upgradeList" id="upgradeList">
+            <h2>Workers</h2>
+            <div class="mini_worker" id="mini_worker">
+                <h3>Mini Worker</h3>
+                <h3 id="miniWorkerCost">100</h3>
+                <button class="buttonDefault" id="miniWorkerButton">Buy</button>
+            </div>
+            <div class="mid_worker" id="mid_worker">
+                <h3>Mid Worker</h3>
+                <h3 id="midWorkerCost">1000</h3>
+                <button class="buttonDefault" id="midWorkerButton">Buy</button>
+            </div>
+            <div class="Big Worker" id="Big Worker">
+                <h3>Big Worker</h3>
+                <h3 id="bigWorkerCost">10000</h3>
+                <button class="buttonDefault" id="bigWorkerButton">Buy</button>
+            </div>
+        </div>
+
+        <div class="header"> 
+            <h1 style="font-size: 56px; text-shadow: 3px 4px black;">HEMP CLICKER</h1>
+        </div>
+
+        <div class="hempCounter" id="hempCounter">Hemp: 0</div>
+        <button class="hempButton" id="hempButton"><img src="assets/shop-icon-remove.png" draggable="false" width="400" height="400px"/></button>
+
+        <script src="main.js"></script>
+    </div>
+
+    <div class="footer">
+        <h3>Created by: RADERRO</h3>
+    </div>
+</body>
+</html>
