@@ -5,7 +5,10 @@ body, h1, h2, h3, p, ul, li {
 }
 
 .taskbar {
-    text-align: center;
+    margin-left: 390px;
+}
+
+.logo{
 }
 
 .main_site{
@@ -38,10 +41,9 @@ body {
 header {
     background-color: black;
     color: white;
-    text-align: center;
     align-items: center;
     padding: 10px;
-    justify-content: center;
+    display: flex;
 }
 
 .button {
@@ -70,6 +72,20 @@ header {
         flex-direction: column;
         width: 100%;
         height: 100%;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .taskbar {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
     }
 
     .baner_main{
