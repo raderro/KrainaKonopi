@@ -38,7 +38,7 @@
             <p id="product-price">Cena: $0.00</p>
             <img id="product-image" src="" alt="Zdjęcie produktu">
             <p id="product-description">Opis produktu będzie się tutaj pojawiać.</p>
-            <button class="button">Dodaj do koszyka</button>
+            <button id="button" class="button">Dodaj do koszyka</button>
         </div>
     </div>
     <script>
@@ -202,6 +202,13 @@
             productPrice.textContent = `Cena: $${product.price.toFixed(2) + "/1g"}`;
             productImage.src = product.imageUrl;
             productDescription.textContent = product.description;
+
+            const addToCartButton = document.createElement('button');
+            addToCartButton.textContent = 'Dodaj do koszyka';
+            addToCartButton.classList.add('button');
+            addToCartButton.addEventListener('click', () => {
+                addToCart(product);
+            });
         }
     </script>
 

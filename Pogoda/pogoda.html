@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pogoda</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>POGODA</h1>
+
+        <input type="text" id="cityInput" placeholder="Wpisz nazwę miasta">
+        <button onclick="getWeather()">Szukaj</button>
+
+        <div class="weatherInfo" id="weatherInfo"></div>
+
+        <script>
+            function getWeather() {
+                if(document.getElementById("cityInput").value == "") {
+                    alert("Wpisz nazwę miasta.");
+                    return;
+                }
+                else{
+                    var city = document.getElementById("cityInput").value;
+                    var apiKey = "52c8e2ec079e47fc1d32e9e03fc40f89";
+                    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&lang=pl&units=metric";
+    
+                    fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        var weatherInfo = document.getElementById("weatherInfo");
+                        weatherInfo.innerHTML = "<h2>Pogoda w " + data.name + "</h2>";
+                        weatherInfo.innerHTML += "<h3>Temperatura: " + data.main.temp + "°C</h3>";
+                        var icon = data.weather[0].icon;
+                        var iconUrl = "http://openweathermap.org/img/w/" + icon + ".png";
+                        weatherInfo.innerHTML += "<img src='" + iconUrl + "'width: 200px height: 200px'>";
+                        weatherInfo.innerHTML += "<h3>" + data.weather[0].description + "</h3>";
+                        weatherInfo.innerHTML += "<h3>Wilgotność: " + data.main.humidity + "%</h3>";
+                        weatherInfo.innerHTML += "<h3>Ciśnienie: " + data.main.pressure + " hPa</h3>";
+
+                        var sunrise = new Date(data.sys.sunrise * 1000);
+                        var sunriseTime = sunrise.getHours() + ":" + sunrise.getMinutes();
+                        var sunset = new Date(data.sys.sunset * 1000);
+                        var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
+                        weatherInfo.innerHTML += "<h3>Wschód słońca: " + sunriseTime + "</h3>";
+                        weatherInfo.innerHTML += "<h3>Zachód słońca: " + sunsetTime + "</h3>";
+
+                        var mapUrl = "https://www.openstreetmap.org/#map=12/" + data.coord.lat + "/" + data.coord.lon;
+                        weatherInfo.innerHTML += "<a href='" + mapUrl + "' target='_blank'>Zobacz na mapie</a>";
+
+                        var weatherInfo = document.getElementById("weatherInfo");
+                        weatherInfo.style.border = "1px solid black";
+                        weatherInfo.style.padding = "10px";
+                        weatherInfo.style.marginTop = "20px";
+                    })
+                    .catch(error => {
+                        console.log("Wystąpił błąd:", error);
+                        var weatherInfo = document.getElementById("weatherInfo");
+                        weatherInfo.innerHTML = "<p>Wystąpił błąd. Spróbuj ponownie później.</p>";
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
