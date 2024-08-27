@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raderro Casino</title>
+    <link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Witamy w Raderro Casino!</h1>
+
+        <div class="login-form">
+            <label for="nickname">Podaj swój nick:</label>
+            <input type="text" id="nickname" placeholder="Wpisz swój nick">
+            <button id="loginButton">Zaloguj się</button>
+        </div>
+
+        <div id="userInfo" class="hidden">
+            <h2>Witaj, <span id="userNickname"></span>!</h2>
+            <p>Saldo konta: <span id="userBalance">0.00</span> zł</p>
+        </div>
+
+        <div id="gameSelection" class="hidden">
+            <h2>Wybierz grę:</h2>
+            <div class="game-option" onclick="window.location.href='slot-machine.html'">
+                <h3>Raderro Machine</h3>
+                <p>Wygraj miliony!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

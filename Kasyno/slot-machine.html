@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raderro Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div style="margin-left: 15%">
+        <h2>Witaj, <span id="userNickname"></span>!</h2>
+        <p>Saldo konta: <span id="userBalance"></span> zł</p>
+        <br/>
+    </div>
+
+    <div class="container">
+        <h1>Raderro Machine</h1>
+        <div id="balance">100.00</div>
+        <div id="betAmount">1.00</div>
+        <div id="slotContainer">
+            <div id="slot1-1" class="slot">🍋</div>
+            <div id="slot1-2" class="slot">🍒</div>
+            <div id="slot1-3" class="slot">🔔</div>
+            <div id="slot2-1" class="slot">7️⃣</div>
+            <div id="slot2-2" class="slot">🍉</div>
+            <div id="slot2-3" class="slot">🍋</div>
+            <div id="slot3-1" class="slot">🍒</div>
+            <div id="slot3-2" class="slot">🔔</div>
+            <div id="slot3-3" class="slot">7️⃣</div>
+            <div id="slot4-1" class="slot">🍉</div>
+            <div id="slot4-2" class="slot">🍋</div>
+            <div id="slot4-3" class="slot">🍒</div>
+            <div id="slot5-1" class="slot">🔔</div>
+            <div id="slot5-2" class="slot">7️⃣</div>
+            <div id="slot5-3" class="slot">🍉</div>
+        </div>
+        <button id="decreaseBet">Zmniejsz stawkę</button>
+        <button id="spinButton">Zakręć</button>
+        <button id="increaseBet">Zwiększ stawkę</button>
+
+        <div id="message"></div>
+    </div>
+    <div class="big-win" id="bigWin">
+        BIG WIN!
+        <div id="countingWin">0.00 zł</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nickname = localStorage.getItem('nickname');
+            const balance = parseFloat(localStorage.getItem('balance')).toFixed(2);
+            document.getElementById('userNickname').textContent = nickname;
+            document.getElementById('userBalance').textContent = balance;
+        });
+
+        function updateBalance(newBalance) {
+            localStorage.setItem('balance', newBalance.toFixed(2));
+            document.getElementById('userBalance').textContent = newBalance.toFixed(2);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
