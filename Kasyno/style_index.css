@@ -10,6 +10,14 @@ body {
     height: 100vh;
 }
 
+.logo{
+    width: 100px;
+    height: 130px;
+    margin: 0 auto;
+    display: block;
+    margin-left: 35%;
+}
+
 .container {
     background-color: rgba(44, 62, 80, 0.9);
     padding: 30px 50px;

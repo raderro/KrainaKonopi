@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let balance = parseFloat(localStorage.getItem('balance')) || 100.00;
     let betAmount = parseFloat(localStorage.getItem('betAmount')) || 1.00;
 
-    const symbols = ["🍒", "🔔", "🍋", "🍉", "7️⃣"];
+    const symbols = ["🍒", "🔔", "🍋", "🍉", "7️⃣", "📚"];
     const slots = [];
     for (let i = 1; i <= 5; i++) {
         for (let j = 1; j <= 3; j++) {
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             updateBalanceDisplay();
 
             let results = [];
+            let bookCount = 0;
             const spinDuration = 1500;
 
             slots.forEach((slot, index) => {
@@ -66,6 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         slot.textContent = result;
                         slot.style.transform = `translateY(0)`;
+
+                        if (result === "📚") {
+                            bookCount++;
+                        }
                     }, 250);
                 }, (index % 5) * 200);
             });
@@ -73,6 +78,21 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 let payout = 0;
                 const winningSlots = [];
+
+                if (bookCount >= 7) {
+                    alert("Wygrałeś 20 darmowych obrotów!");
+                    let freeSpins = 20;
+                    
+                    const runFreeSpins = () => {
+                        if (freeSpins > 0) {
+                            freeSpins--;
+                            spin();
+                        }
+                    };
+    
+                    runFreeSpins();
+                }
+    
 
                 for (let i = 0; i < 3; i++) {
                     const rowStart = i * 5;
@@ -150,3 +170,21 @@ function updateUI() {
 }
 
 document.addEventListener('DOMContentLoaded', updateUI);
+
+let freeSpins = 0;
+
+function spin() {
+    if (freeSpins > 0) {
+        freeSpins--;
+        spin();
+    }
+}
+
+document.getElementById('spinButton').addEventListener('click', spin);
+
+function updateFreeSpinsDisplay() {
+    const freeSpinsDisplay = document.getElementById('freeSpins');
+    if (freeSpinsDisplay) {
+        freeSpinsDisplay.textContent = `Darmowe obroty: ${freeSpins}`;
+    }
+}
